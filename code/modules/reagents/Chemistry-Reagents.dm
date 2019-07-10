@@ -7523,3 +7523,15 @@ var/global/list/tonio_doesnt_remove=list("tonio", "blood")
 	description = "This has what you crave. Electrolytes."
 	sport = 5
 	custom_metabolism = 0.15
+
+/datum/reagent/incense/cornoil
+	name = "Corn Oil Incense"
+	id = INCENSE_CORNOIL
+	description = "This fragrance reminds you of a nice home-cooked meal, and sometimes even feels like it fills you up."
+
+/datum/reagent/incense/cornoil/on_mob_life(var/mob/living/M)
+	if(..())
+		return 1
+	if(prob(5))
+		to_chat(M,"<span class='warning'>[pick("You feel fuller.", "You no longer feel snackish.")]</span>")
+		M.reagents.add_reagent(NUTRIMENT, 2)
