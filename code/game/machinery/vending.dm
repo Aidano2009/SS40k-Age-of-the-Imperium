@@ -1579,6 +1579,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/weapon/reagent_containers/syringe/antiviral = 4,
 		/obj/item/weapon/reagent_containers/syringe = 12,
 		/obj/item/device/healthanalyzer = 5,
+		/obj/item/device/antibody_scanner = 5,
 		/obj/item/weapon/reagent_containers/glass/beaker = 4,
 		/obj/item/weapon/reagent_containers/dropper = 2,
 		/obj/item/stack/medical/splint = 4,
@@ -1642,6 +1643,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/stack/medical/ointment = 2,
 		/obj/item/weapon/reagent_containers/syringe/inaprovaline = 4,
 		/obj/item/device/healthanalyzer = 1,
+		/obj/item/device/antibody_scanner = 1,
 		/obj/item/stack/medical/splint = 1,
 		)
 	contraband = list(
@@ -1666,6 +1668,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/stack/medical/bruise_pack = 3,
 		/obj/item/stack/medical/ointment =3,
 		/obj/item/device/healthanalyzer = 3,
+		/obj/item/device/antibody_scanner = 3,
 		)
 	contraband = list(
 		/obj/item/weapon/reagent_containers/pill/tox = 3,
@@ -2119,7 +2122,8 @@ var/global/num_vending_terminals = 1
 		/obj/item/clothing/back/magiccape = 1,
 		)
 
-	pack = /obj/structure/vendomatpack/magivend	//Who's laughing now? wizarditis doesn't do shit anyway. - Deity Link
+	pack = /obj/structure/vendomatpack/magivend	//Who's laughing now? wizarditis doesn't do shit anyway. - Deity Link of 2014
+												//How about I make a foul of myself 5 years later? Wizarditis is now a proper symptom. - Deity Link of 2019
 
 /obj/machinery/vending/dinnerware
 	name = "\improper Dinnerware"
@@ -3253,7 +3257,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/weapon/mining_drone_cube = 5,
 		/obj/item/device/wormhole_jaunter = 10,
 		/obj/item/weapon/resonator = 5,
-		/obj/item/weapon/gun/energy/kinetic_accelerator = 10,
+		/obj/item/voucher/warp/kinetic_accelerator = 10,
 		/obj/item/weapon/tank/jetpack/carbondioxide = 3,
 		/obj/item/weapon/gun/hookshot = 3,
 		/obj/item/weapon/lazarus_injector/advanced = 4,
@@ -3283,7 +3287,7 @@ var/global/num_vending_terminals = 1
 		/obj/item/device/wormhole_jaunter = 25,
 		/obj/item/weapon/resonator = 75,
 		/obj/item/weapon/storage/bag/money = 10,
-		/obj/item/weapon/gun/energy/kinetic_accelerator = 300,
+		/obj/item/voucher/warp/kinetic_accelerator = 25,
 		/obj/item/weapon/pickaxe/silver = 100,
 		/obj/item/weapon/pickaxe/gold = 200,
 		/obj/item/weapon/tank/jetpack/carbondioxide = 300,
