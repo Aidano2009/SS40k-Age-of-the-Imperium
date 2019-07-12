@@ -64,12 +64,38 @@
 		completions += "<HR>"
 
 	//Score Calculation and Display
+	for (var/ID in disease2_list)
+		var/disease_spread_count = 0
+		var/datum/disease2/disease/D = disease2_list[ID]
+		var/disease_score = 0
+		for (var/datum/disease2/effect/E in D.effects)
+			disease_score += text2num(E.badness)
+
+		//diseases only count if the mob is still alive
+		if (disease_score <3)
+			for (var/mob/living/L in mob_list)
+				if (ID in L.virus2)
+					disease_spread_count++
+					if (L.stat != DEAD)
+						score["disease_good"]++
+		else
+			for (var/mob/living/L in mob_list)
+				if (ID in L.virus2)
+					disease_spread_count++
+					if (L.stat != DEAD)
+						score["disease_bad"]++
+
+		if (disease_spread_count > score["disease_most_count"])
+			score["disease_most_count"] = disease_spread_count
+			score["disease_most"] = ID
 
 	//Run through humans for diseases, also the Clown
 	for(var/mob/living/carbon/human/I in mob_list)
+		/*
 		if(I.viruses) //Do this guy have any viruses ?
 			for(var/datum/disease/D in I.viruses) //Alright, start looping through those viruses
 				score["disease"]++ //One point for every disease
+		*/
 
 		if(I.job == "Clown")
 			for(var/thing in I.attack_log)
@@ -119,7 +145,6 @@
 
 
 	/*
-
 	var/nukedpenalty = 1000
 	if(ticker.mode.config_tag == "nuclear")
 		var/foecount = 0
@@ -135,7 +160,6 @@
 				score["opkilled"]++
 		if(foecount == score["arrested"])
 			score["allarrested"] = 1
-
 		score["disc"] = 1
 		for(var/obj/item/weapon/disk/nuclear/A in world)
 			if(A.loc != /mob/living/carbon)
@@ -152,10 +176,8 @@
 				score["disc"] = 0
 			if(A.loc.z != map.zMainStation)
 				score["disc"] = 0
-
 		if(score["nuked"])
 			nukedpenalty = 50000 //Congratulations, your score was nuked
-
 			for(var/obj/machinery/nuclearbomb/nuke in machines)
 				if(nuke.r_code == "Nope")
 					continue
@@ -168,8 +190,6 @@
 					nukedpenalty = 100000
 				else
 					nukedpenalty = 10000
-
-
 	if(ticker.mode.config_tag == "revolution")
 		var/foecount = 0
 		for(var/datum/mind/M in ticker.mode:head_revolutionaries)
@@ -190,7 +210,6 @@
 				if(role in list("Captain", "Head of Security", "Head of Personnel", "Chief Engineer", "Research Director"))
 					if(player.stat == DEAD)
 						score["deadcommand"]++
-
 	*/
 
 	//Check station's power levels
@@ -249,7 +268,8 @@
 		messpoints = score["mess"] //If there are any messes, let's count them
 	//if(score["airloss"] != 0)
 		//atmos = score["airloss"] * 20 //Air issues are bad, but since it's space, don't stress it too much
-	var/plaguepoints = score["disease"] * 50 //A diseased crewman is half-dead, as they say, and a double diseased is double half-dead
+	var/beneficialpoints = score["disease_good"] * 20
+	var/plaguepoints = score["disease_bad"] * 50 //A diseased crewman is half-dead, as they say, and a double diseased is double half-dead
 
 	/*//Mode Specific
 	if(ticker.mode.config_tag == "nuclear")
@@ -261,7 +281,6 @@
 		score["crewscore"] += arrestpoints
 		//if(score["nuked"])
 			//score["crewscore"] -= nukedpenalty
-
 	if(ticker.mode.config_tag == "revolution")
 		var/arrestpoints = score["arrested"] * 1000
 		var/killpoints = score["opkilled"] * 500
@@ -280,6 +299,7 @@
 	score["crewscore"] += escapoints
 	score["crewscore"] += meals
 	score["crewscore"] += time
+	score["crewscore"] += beneficialpoints
 
 	if(!power) //No APCs with bad power
 		score["crewscore"] += 2500 //Give the Engineers a pat on the back for bothering
@@ -340,7 +360,6 @@
 	dat += {"<BR><h2>Round Statistics and Score</h2>"}
 
 	/*
-
 	if(ticker.mode.name == "nuclear emergency")
 		var/foecount = 0
 		var/crewcount = 0
@@ -356,7 +375,6 @@
 			if(!C.client)
 				continue
 			crewcount++
-
 		for(var/obj/item/weapon/disk/nuclear/N in world)
 			if(!N)
 				continue
@@ -371,7 +389,6 @@
 				disk_loc = disk_loc.loc
 			diskdat += "in [disk_loc.loc]"
 			break // Should only need one go-round, probably
-
 		for(var/obj/machinery/nuclearbomb/nuke in machines)
 			if(nuke.r_code == "Nope")
 				continue
@@ -388,10 +405,8 @@
 			break
 		if(!diskdat)
 			diskdat = "Uh oh. Something has fucked up! Report this."
-
 		<B>Final Location of Nuke:</B> [bombdat]<BR>
 		<B>Final Location of Disk:</B> [diskdat]<BR><BR>
-
 		dat += {"<B><U>MODE STATS</U></B><BR>
 		<B>Number of Operatives:</B> [foecount]<BR>
 		<B>Number of Surviving Crew:</B> [crewcount]<BR>
@@ -403,7 +418,6 @@
 		<B>All Operatives Arrested:</B> [score["allarrested"] ? "Yes" : "No"] (Score tripled)<BR>
 		<HR>"}
 //		<B>Nuclear Disk Secure:</B> [score["disc"] ? "Yes" : "No"] ([score["disc"] * 500] Points)<BR>
-
 	if(ticker.mode.name == "revolution")
 		var/foecount = 0
 		var/comcount = 0
@@ -429,7 +443,6 @@
 			if (X.stat != 2)
 				loycount++
 		var/revpenalty = 10000
-
 		dat += {"<B><U>MODE STATS</U></B><BR>
 		<B>Number of Surviving Revolution Heads:</B> [foecount]<BR>
 		<B>Number of Surviving Command Staff:</B> [comcount]<BR>
@@ -441,12 +454,10 @@
 		<B>Revolution Successful:</B> [score["traitorswon"] ? "Yes" : "No"] (-[score["traitorswon"] * revpenalty] Points)<BR>
 		<B>All Revolution Heads Arrested:</B> [score["allarrested"] ? "Yes" : "No"] (Score tripled)<BR>
 		<HR>"}
-
 	*/
 
 //	var/totalfunds = wagesystem.station_budget + wagesystem.research_budget + wagesystem.shipping_budget
 	dat += {"<B><U>GENERAL STATS</U></B><BR>
-
 	<U>THE GOOD:</U><BR>
 	<B>Length of Shift:</B> [round(world.time/600)] Minutes ([round(score["time"] * 0.2)] Points)<BR>
 	<B>Hydroponics Harvests:</B> [score["stuffharvested"]] ([score["stuffharvested"] * 1] Points)<BR>
@@ -455,8 +466,8 @@
 	<B>Shuttle Escapees:</B> [score["escapees"]] ([score["escapees"] * 100] Points)<BR>
 	<B>Random Events Endured:</B> [score["eventsendured"]] ([score["eventsendured"] * 200] Points)<BR>
 	<B>Whole Station Powered:</B> [score["powerbonus"] ? "Yes" : "No"] ([score["powerbonus"] * 2500] Points)<BR>
-	<B>Ultra-Clean Station:</B> [score["messbonus"] ? "Yes" : "No"] ([score["messbonus"] * 10000] Points)<BR><BR>
-
+	<B>Ultra-Clean Station:</B> [score["messbonus"] ? "Yes" : "No"] ([score["messbonus"] * 10000] Points)<BR>
+	<B>Beneficial diseases in living mobs:</B> [score["disease_good"]] ([score["disease_good"] * 20] Points)<BR><BR>
 	<U>THE BAD:</U><BR>
 	<B>Dead Crewmen:</B> [score["deadcrew"]] (-[score["deadcrew"] * 250] Points)<BR>
 	<B>Destroyed Silicons:</B> [score["deadsilicon"]] (-[score["deadsilicon"] * 500] Points)<BR>
@@ -464,8 +475,7 @@
 	<B>Uncleaned Messes:</B> [score["mess"]] (-[score["mess"]] Points)<BR>
 	<B>Trash on Station:</B> [score["litter"]] (-[score["litter"]] Points)<BR>
 	<B>Station Power Issues:</B> [score["powerloss"]] (-[score["powerloss"] * 50] Points)<BR>
-	<B>Unique Disease Vectors:</B> [score["disease"]] (-[score["disease"] * 50] Points)<BR><BR>
-
+	<B>Bad diseases in living mobs:</B> [score["disease_bad"]] (-[score["disease_bad"] * 50] Points)<BR><BR>
 	<U>THE WEIRD</U><BR>"}
 /*	<B>Final Station Budget:</B> $[num2text(totalfunds,50)]<BR>"}
 	var/profit = totalfunds - 100000
@@ -495,6 +505,17 @@
 		dat += "<B>Guns Magically Spawned:</B> [score["gunsspawned"]]<BR>"
 	if(score["nukedefuse"] < 30)
 		dat += "<B>Seconds Left on the Nuke When It Was Defused:</B> [score["nukedefuse"]]<BR>"
+	if(score["disease_most"] != null)
+		var/datum/disease2/disease/D = disease2_list[score["disease_most"]]
+		var/nickname = ""
+		var/dis_name = ""
+		if (score["disease_most"] in virusDB)
+			var/datum/data/record/v = virusDB[score["disease_most"]]
+			nickname = v.fields["nickname"] ? " \"[v.fields["nickname"]]\"" : ""
+			dis_name = v.fields["name"]
+		dat += "<B>Most Spread Disease:</B> [dis_name ? "[dis_name]":"[D.form] #[add_zero("[D.uniqueID]", 4)]-[add_zero("[D.subID]", 4)]"][nickname] (Origin: [D.origin], Strength: [D.strength]%, spread among [score["disease_most_count"]] mobs)<BR>"
+		for(var/datum/disease2/effect/e in D.effects)
+			dat += "&#x25CF; Stage [e.stage] - <b>[e.name]</b><BR>"
 
 	//Vault and away mission specific scoreboard elements
 	//The process_scoreboard() proc returns a list of strings associated with their score value (the number that's added to the total score)
@@ -521,7 +542,6 @@
 	else
 		dat += "The station wasn't evacuated or there were no survivors!<BR>"
 	dat += {"<HR><BR>
-
 	<B><U>FINAL SCORE: [score["crewscore"]]</U></B><BR>"}
 	score["rating"] = "A Rating"
 
