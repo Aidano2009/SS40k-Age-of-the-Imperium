@@ -360,3 +360,23 @@
 			holder.emote("shiver")
 		if(holder.reagents && holder.reagents.has_reagent(LEPORAZINE))	//No escaping winter's curse
 			holder.bodytemperature = max(holder.bodytemperature-200 * TEMPERATURE_DAMAGE_COEFFICIENT,T20C)
+
+// Warhammer 40.000k Armors should be added here
+
+/obj/item/clothing/suit/armor/IGarmor
+	name = "Imperial Guardsman armor"
+	desc = "Standard issue armor given to Guardsmen of the Imperial Guard. Protects against some damage."
+	icon_state = "guard_armor"
+	item_state = "guard_armor"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 35, bullet = 35, laser = 30, energy = 20, bomb = 25, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/imperialarmor/CommissarCoat
+	name = "Commissar Coat"
+	desc = "A reinforced Coat that will inspire morale and scare the enemy from firing at you..Possibly."
+	icon_state = "commissar_coat"
+	item_state = "commissar_coat"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 45, bullet = 45, laser = 50, energy = 30, bomb = 35, bio = 0, rad = 0)
