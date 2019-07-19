@@ -366,7 +366,7 @@ var/savefile/panicfile
 
 	s += "<b>>SS40k: <i>Age of The Imperium</i></b>] - Periodically up for Tests, Come try it out.<br>"
 	s += "<br>"
-	s += "Currently set on <b>aaaa</b>. \[<a href=\"http://discord.gg/cWNrv4W\">Discord</a><br>"
+	s += "Currently set on <b>[map.nameLong]</b>. \[<a href=\"http://discord.gg/cWNrv4W\">Discord</a><br>"
 
 
 
