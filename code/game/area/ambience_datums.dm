@@ -189,10 +189,6 @@
 	length = 51 SECONDS
 	sound = 'sound/music/main.ogg'
 
-/datum/ambience/spacemusic
-	length = 3 MINUTES + 34 SECONDS
-	sound = 'sound/music/space.ogg'
-
 /datum/ambience/traitormusic
 	length = 5 MINUTES + 30 SECONDS
 	sound = 'sound/music/traitor.ogg'
