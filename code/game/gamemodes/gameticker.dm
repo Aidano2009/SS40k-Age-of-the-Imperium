@@ -63,6 +63,9 @@ var/datum/controller/gameticker/ticker
 		"sound/music/starman.ogg",
 		"sound/music/twilight.ogg",
 		"sound/music/gi.ogg",
+		"sound/music/infiltrator.ogg",
+		"sound/music/kill.ogg",
+		"sound/music/vigilante.ogg",
 		))
 
 	if(SNOW_THEME)
