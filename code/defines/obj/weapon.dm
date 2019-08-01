@@ -129,6 +129,23 @@
 	melt_temperature = MELTPOINT_STEEL
 	attack_verb = list("bludgeons", "whacks", "disciplines", "thrashes")
 
+/obj/item/weapon/psykerstaff
+	name = "Psyker Staff"
+	desc = "MY MIND BEARS A GREAT PAIN!."
+	icon = 'icons/obj/weapons.dmi'
+	origin_tech = Tc_MATERIALS + "=1"
+	icon_state = "thepsykerstaff"
+	item_state = "psykerstaff"
+	flags = FPRINT
+	siemens_coefficient = 1
+	force = 10.0
+	throwforce = 7.0
+	w_class = W_CLASS_SMALL
+	starting_materials = list(MAT_IRON = 50)
+	w_type = RECYK_MISC
+	melt_temperature = MELTPOINT_STEEL
+	attack_verb = list("bludgeons", "whacks", "dooms", "curses")
+
 /obj/item/weapon/disk
 	name = "Corrupted Data Disk"
 	desc = "The data on this disk has decayed, and cannot be read by any computer anymore."
