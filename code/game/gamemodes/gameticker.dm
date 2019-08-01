@@ -47,24 +47,25 @@ var/datum/controller/gameticker/ticker
 #define LOBBY_TICKING_RESTARTED 2
 /datum/controller/gameticker/proc/pregame()
 	var/oursong = file(pick(
-		"sound/music/space.ogg",
 		"sound/music/traitor.ogg",
 		"sound/music/space_oddity.ogg",
+		"sound/music/40ktitle1.ogg",
 		"sound/music/title1.ogg",
 		"sound/music/title2.ogg",
 		"sound/music/title3.ogg",
 		"sound/music/clown.ogg",
 		"sound/music/robocop.ogg",
 		"sound/music/gaytony.ogg",
-		"sound/music/rocketman.ogg",
 		"sound/music/2525.ogg",
-		"sound/music/moonbaseoddity.ogg",
+		"sound/music/erewego.ogg",
 		"sound/music/whatisthissong.ogg",
 		"sound/music/space_asshole.ogg",
 		"sound/music/starman.ogg",
-		"sound/music/dawsonschristian.ogg",
-		"sound/music/carmenmirandasghost.ogg",
 		"sound/music/twilight.ogg",
+		"sound/music/gi.ogg",
+		"sound/music/infiltrator.ogg",
+		"sound/music/kill.ogg",
+		"sound/music/vigilante.ogg",
 		))
 
 	if(SNOW_THEME)
@@ -399,6 +400,7 @@ var/datum/controller/gameticker/ticker
 					else
 						data_core.manifest_inject(new_character)
 				player.FuckUpGenes(new_character)
+				player.DiseaseCarrierCheck(new_character)
 				qdel(player)
 
 

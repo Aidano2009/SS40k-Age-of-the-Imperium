@@ -537,7 +537,7 @@
 	_color = "maid"
 
 /obj/item/clothing/under/darkholme
-	name = "\improper The Darkholme"
+	name = "\improper Darkholme"
 	desc = "Fuck you."
 	icon_state = "darkholme"
 	item_state = "darkholme"
@@ -771,4 +771,10 @@
 	_color = "commissar"
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
 
+/obj/item/clothing/under/varsity
+	name = "varsity jacket"
+	desc = "A jacket that belongs to either a high school student or an ancient German tyrant."
+	icon_state = "varsity"
+	item_state = "varsity"
+	_color = "varsity"
 
