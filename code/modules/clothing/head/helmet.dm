@@ -280,3 +280,47 @@
 	armor = list(melee = 10, bullet = 15, laser = 2,energy = 2, bomb = 2, bio = 2, rad = 0)
 	flags = FPRINT
 	siemens_coefficient = 1
+
+// Warhammer 40.000k helmets should be here.
+
+/obj/item/clothing/head/helmet/IGhelmet
+	name = "Guardsman helmet"
+	desc = "Standard issue helmet given to Guardsmen of the Imperial Guard. Protects against some damage."
+	icon_state = "guard_helmet"
+	item_state = "guard_helmet"
+	armor = list(melee = 35, bullet = 35, laser = 30, energy = 20, bomb = 25, bio = 0, rad = 0)
+	body_parts_covered = HEAD|EARS
+	heat_conductivity = HELMET_HEAT_CONDUCTIVITY
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
+/obj/item/clothing/head/helmet/CommissarCap
+	name = "Commissar Cap"
+	desc = "An armored cap with the imperial insignia on it, symbolizing the authority of a Commissar."
+	icon_state = "commissar_cap"
+	item_state = "commissar_cap"
+	armor = list(melee = 75, bullet = 75, laser = 40, energy = 20, bomb = 25, bio = 0, rad = 0)
+	body_parts_covered = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
+/obj/item/clothing/head/helmet/FemInqHat
+	name = "Witch Hunter hat"
+	desc = "In the grim darkness of the far future, there is only war...And hats..Lots of hats.."
+	icon_state = "feminq_hat"
+	item_state = "feminq_hat"
+	armor = list(melee = 75, bullet = 75, laser = 70, energy = 20, bomb = 25, bio = 100, rad = 100)
+	body_parts_covered = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
+/obj/item/clothing/head/helmet/PsykerHat
+	name = "Sanctioned Psyket Hat"
+	desc = "WITHNESS YOUR DOOM!!....Again."
+	icon_state = "psyker_hat"
+	item_state = "psyker_hat"
+	armor = list(melee = 45, bullet = 45, laser = 40, energy = 90, bomb = 45, bio = 10, rad = 10)
+	body_parts_covered = HEAD|EARS
+	heat_conductivity = HELMET_HEAT_CONDUCTIVITY
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7

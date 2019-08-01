@@ -755,9 +755,26 @@
 	_color = "tourist"
 	species_fit = list(GREY_SHAPED)
 
+/obj/item/clothing/under/IGuniform
+	name = "Imperial Guardsman uniform"
+	desc = "A standard issue uniform given to Guardsmen of the Imperial Guard."
+	icon_state = "guardsman"
+	item_state = "guardsman"
+	_color = "guardsman"
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/under/Commissar
+	name = "Commissar Uniform"
+	desc = "HAVING THIS STAINED WITH BLOOD DOES NOT INSPIRE MORALE."
+	icon_state = "commissar"
+	item_state = "commissar"
+	_color = "commissar"
+	armor = list(melee = 10, bullet = 10, laser = 10,energy = 0, bomb = 0, bio = 0, rad = 0)
+
 /obj/item/clothing/under/varsity
 	name = "varsity jacket"
 	desc = "A jacket that belongs to either a high school student or an ancient German tyrant."
 	icon_state = "varsity"
 	item_state = "varsity"
 	_color = "varsity"
+
