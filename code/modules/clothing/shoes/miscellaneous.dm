@@ -137,12 +137,14 @@
 	slowdown = MISC_SHOE_SLOWDOWN
 	species_fit = list(VOX_SHAPED)
 	heat_conductivity = INS_SHOE_HEAT_CONDUCTIVITY
+	sterility = 100
 
 /obj/item/clothing/shoes/galoshes/broken
 	name = "ruined galoshes"
 	desc = "The grip treading is broken off."
 	icon_state = "galoshes_ruined"
 	flags = null
+	sterility = 80
 
 /obj/item/clothing/shoes/clown_shoes
 	desc = "The prankster's standard-issue clowning shoes. Damn they're huge!"
