@@ -190,6 +190,7 @@
 		else
 			new /obj/item/stack/medical/splint/ghetto(get_turf(src.loc))
 		qdel(W)
+		qdel(src)
 
 /obj/item/weapon/cylinder
 	name = "beaker"
