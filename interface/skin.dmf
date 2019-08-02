@@ -732,7 +732,6 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -754,7 +753,7 @@ window "outputwindow"
 window "rpane"
 	elem "rpane"
 		type = MAIN
-		pos = 190,0
+		pos = 203,0
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
@@ -858,6 +857,18 @@ window "rpane"
 		saved-params = "is-checked"
 		text = "Info"
 		command = ".winset \"rpanewindow.left=infowindow\""
+		group = "rpanemode"
+		button-type = pushbox
+	elem "special_button"
+		type = BUTTON
+		pos = 328,0
+		size = 60x16
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		saved-params = "is-checked"
+		text = "Special"
+		command = ".winset \"rpanewindow.left=window1\""
 		group = "rpanemode"
 		button-type = pushbox
 
