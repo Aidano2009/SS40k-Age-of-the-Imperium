@@ -1,4 +1,4 @@
-/datum/species/ork // /ss40k/
+/datum/species/ork // /ss40k/ heres mr ork, or really their only gender should be male
 	name = "Ork"
 	icobase = 'icons/mob/human_races/r_ork.dmi'
 	deform = 'icons/mob/human_races/r_def_ork.dmi'
@@ -31,3 +31,17 @@
 		"brain" =    /datum/organ/internal/brain,
 		"eyes" =     /datum/organ/internal/eyes
 	)
+
+	uniform_icons       = 'icons/mob/species/ork/orkgearMOB.dmi'
+//	fat_uniform_icons   = 'icons/mob/uniform_fat.dmi'
+	gloves_icons        = 'icons/mob/species/ork/orkgearMOB.dmi'
+//	glasses_icons       = 'icons/mob/eyes.dmi'
+//	ears_icons          = 'icons/mob/ears.dmi'
+	shoes_icons         = 'icons/mob/species/ork/orkgearMOB.dmi'
+	head_icons          = 'icons/mob/species/ork/orkgearMOB.dmi'
+	belt_icons          = 'icons/mob/species/ork/orkgearMOB.dmi'
+	wear_suit_icons     = 'icons/mob/species/ork/orkgearMOB.dmi'
+//	fat_wear_suit_icons = 'icons/mob/suit_fat.dmi'
+//	wear_mask_icons     = 'icons/mob/mask.dmi'
+	back_icons          = 'icons/mob/species/ork/orkgearMOB.dmi'
+//	id_icons            = 'icons/mob/ids.dmi'
