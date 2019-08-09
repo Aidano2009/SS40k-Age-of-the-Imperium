@@ -755,6 +755,8 @@
 	_color = "tourist"
 	species_fit = list(GREY_SHAPED)
 
+// Warhammer 40.000k Uniforms should be here:
+
 /obj/item/clothing/under/IGuniform
 	name = "Imperial Guardsman uniform"
 	desc = "A standard issue uniform given to Guardsmen of the Imperial Guard."

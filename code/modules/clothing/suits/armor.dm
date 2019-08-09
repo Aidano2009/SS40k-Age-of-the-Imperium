@@ -361,7 +361,7 @@
 		if(holder.reagents && holder.reagents.has_reagent(LEPORAZINE))	//No escaping winter's curse
 			holder.bodytemperature = max(holder.bodytemperature-200 * TEMPERATURE_DAMAGE_COEFFICIENT,T20C)
 
-// Warhammer 40.000k Armors should be added here
+// Warhammer 40.000k Armors should be added here.
 
 /obj/item/clothing/suit/armor/IGarmor
 	name = "Imperial Guardsman armor"
@@ -371,6 +371,14 @@
 	blood_overlay_type = "armor"
 	clothing_flags = ONESIZEFITSALL
 	armor = list(melee = 35, bullet = 35, laser = 30, energy = 20, bomb = 25, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/imperialarmor/Sargearmor
+	name = "Guardsman Sergeant armor"
+	desc = "Standard issue armor given to Guardsmen Sergeants of the Imperial Guard. More resistant to heavy fire than the normal variant"
+	icon_state = "sarge_armor"
+	item_state = "sarge_armor"
+	blood_overlay_type = "armor"
+	armor = list(melee = 40, bullet = 40, laser = 40,energy = 30, bomb = 35, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/imperialarmor/CommissarCoat
 	name = "Commissar Coat"
@@ -384,7 +392,7 @@
 
 /obj/item/clothing/suit/armor/Inqarmor
 	name = "Inquisitor Armor"
-	desc = "Smells of the convicted."
+	desc = "Smells of Blood and Tears of the Convicted..."
 	icon_state = "inq_armor"
 	item_state = "inq_armor"
 	blood_overlay_type = "armor"
@@ -417,3 +425,93 @@
 	blood_overlay_type = "armor"
 	clothing_flags = ONESIZEFITSALL
 	armor = list(melee = 65, bullet = 65, laser = 70, energy = 60, bomb = 65, bio = 100, rad = 100)
+
+// Warhammer 40.000k power armors (Anything Spess Marine Related) should be here.
+
+/obj/item/clothing/suit/armor/BRpowerarmor
+	name = "Blood Raven Power armor"
+	desc = "A heavy-looking chestplate painted in Blood Raven colors.If you look closely, you'd notice slight discoloration, as if it was hastily painted over"
+	icon_state = "raven_armor"
+	item_state = "raven_armor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 100)
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/AMpowerarmor
+	name = "Angry Marine Power armor"
+	desc = "ANGRY MARINES!!! ALWAYS ANGRY!!! ALL THE TIME!!! FUCKING SCREAM IT YOU XENOSFUCKING, ULTRASHIT-LOVING FUCKTARD!!!"
+	icon_state = "anger-armor"
+	item_state = "anger-armor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 80, bullet = 66, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 100)
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/KBpowerarmor
+	name = "Khorne Berzerker Power armor"
+	desc = "Perhaps...One day you will be like Khârn the Betrayer if you just..FUCKING GET OUT AND KILL SOME LOYALIST IN THE NAME OF KHORNE INSTEAD OF LOOKING AT YOUR WARGEAR!!"
+	icon_state = "chaos-berserkarmor"
+	item_state = "chaos-berserkarmor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 85, bullet = 66, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 100)
+
+/obj/item/clothing/suit/armor/BorealePowerarmor
+	name = "Blood Raven Commander Power armor"
+	desc = "Tehre is noh time to beh lohst! Batul Brothas!"
+	icon_state = "raven_cmdarmor"
+	item_state = "raven_cmdarmor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 85, bullet = 85, laser = 85, energy = 85, bomb = 70, bio = 100, rad = 100)
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/NMpowerarmor
+	name = "Noise Marine Power Armor"
+	desc = "Lust, Greed, Temptation! This armour as symbols of chaos, mostly of Marks of Slaanesh carved and painted onto the power armor, it has pink, black and purple painted onto the armor, gold marks on the each arm and each leg, and one on the armor's chestplate. It makes you feel lustful."
+	icon_state = "chaos-noisearmor"
+	item_state = "chaos-noisearmor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 70, bullet = 70, laser = 80, energy = 70, bomb = 70, bio = 100, rad = 100) // N o i s e
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/WBpowerarmor
+	name = "World Bearer Power armor"
+	desc = "A World Bearer Power armor."
+	icon_state = "chaos-armor"
+	item_state = "chaos-armor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 100)
+	slowdown = 1
+
+/obj/item/clothing/suit/armor/ELIPHAS
+	name = "World Bearer Lord Power Armor"
+	desc = "Such inspiring courage! Perhaps we'll mount your corpse on a golden chair and make an idol out of you as well."
+	icon_state = "chaos-cmdarmor"
+	item_state = "chaos-cmdarmor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_LOW
+	armor = list(melee = 80, bullet = 85, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 100)
+	slowdown = 1
+
+
+/obj/item/clothing/suit/armor/TMpowerarmor
+	name = "Blood Raven Terminator Power armor"
+	desc = "Tactical Dreadnought Armour, more commonly known as Terminator Armour, is an advanced form of powered armour developed for close-quarters melee fighting done by Space Marine Terminators, for whom slaying power is more important than maneuverability. These suits are primarily utilised in situations where standard Space Marine Power Armour does not provide enough protection for a warrior."
+	icon_state = "raven-bigarmor"
+	item_state = "raven-bigarmor"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO|FEET|HANDS
+	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
+	slowdown = HARDSUIT_SLOWDOWN_MED
+	armor = list(melee = 95, bullet = 95, laser = 95, energy = 95, bomb = 95, bio = 100, rad = 100)
+	slowdown = 1

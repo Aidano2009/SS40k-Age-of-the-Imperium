@@ -304,6 +304,16 @@
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
 
+/obj/item/clothing/head/helmet/Sargehelmet
+	name = "Sergeant Helmet"
+	desc = "This may not look protective and perhaps suicidal,but it will do.."
+	icon_state = "sarge_helm"
+	item_state = "sarge_helm"
+	armor = list(melee = 45, bullet = 15, laser = 40, energy = 20, bomb = 25, bio = 0, rad = 0)
+	body_parts_covered = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
 /obj/item/clothing/head/helmet/FemInqHat
 	name = "Witch Hunter hat"
 	desc = "In the grim darkness of the far future, there is only war...And hats..Lots of hats.."
@@ -324,3 +334,65 @@
 	heat_conductivity = HELMET_HEAT_CONDUCTIVITY
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
+
+// Warhammer 40.000k Space Marine helmets should be here.
+
+/obj/item/clothing/head/helmet/AMhelmet
+	name = "Angry Marine Power Helmet"
+	desc = "CALL 420-6969-FUCKOFF IF YOU DONT LIKE THIS DESCRIPTION YOU FUCKHEAD!!"
+	icon_state = "angry_helmet"
+	flags = FPRINT
+	item_state = "angry_helmet"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 80, bullet = 70, laser = 70,energy = 70, bomb = 60, bio = 100, rad = 100)
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/KBhelmet
+	name = "Khorne Berzerker Power Helmet"
+	desc = "Blood for the Blood God! Blood for the Blood God! BLOOD FOR THE BLOODGAWDRARAWRERAR!"
+	icon_state = "chaos-berserk"
+	flags = FPRINT
+	item_state = "chaos-berserk"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 80, bullet = 70, laser = 70,energy = 70, bomb = 60, bio = 100, rad = 100)
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/WBhelmet
+	name = "World Bearer Helmet"
+	desc = "Headwear of the World Bearers."
+	icon_state = "chaos-helmet"
+	flags = FPRINT
+	item_state = "chaos-helmet"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 80, bullet = 70, laser = 70,energy = 70, bomb = 60, bio = 100, rad = 100)
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/BRhelmet
+	name = "Blood Raven Helmet"
+	desc = "To 'Inspect' lost relics and reclaim them for the chapter"
+	icon_state = "raven_helmet"
+	flags = FPRINT
+	item_state = "raven_helmet"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 80, bullet = 70, laser = 70,energy = 70, bomb = 60, bio = 100, rad = 100)
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/NMHelm
+	name = "Noise Marine Helmet"
+	desc = "The noise pleases Slaanesh's ears! This helmet has purple, pink, and black color on it with scratches and symbols of chaos put into it, the eyes glow green... You feel disgusting looking at it."
+	icon_state = "chaos-noisehelmet"
+	flags = FPRINT
+	item_state = "chaos-noisehelmet"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 80, bullet = 70, laser = 70,energy = 70, bomb = 60, bio = 100, rad = 100)
+	siemens_coefficient = 1
+
+/obj/item/clothing/head/helmet/TMhelmet
+	name = "Blood Raven Terminator Helmet"
+	desc = "Tactical Dreadnought Armour, more commonly known as Terminator Armour, is an advanced form of powered armour developed for close-quarters melee fighting done by Space Marine Terminators, for whom slaying power is more important than maneuverability. These suits are primarily utilised in situations where standard Space Marine Power Armour does not provide enough protection for a warrior.."
+	icon_state = "raven-bighelm"
+	flags = FPRINT
+	item_state = "raven-bighelm"
+	body_parts_covered = FULL_HEAD|BEARD
+	armor = list(melee = 95, bullet = 95, laser = 95, energy = 95, bomb = 95, bio = 100, rad = 100)
+	siemens_coefficient = 1
