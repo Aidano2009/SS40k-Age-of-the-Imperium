@@ -18,8 +18,8 @@ info.json
 *.swp
 
 #ignore any files in config/, except those in subdirectories.
-/config/*
-!/config/*/*
+#/config/*
+#!/config/*/*
 
 # OpenBYOND-generated crap
 /dmis
@@ -75,3 +75,5 @@ Thumbs.db
 
 # Linux users can compile this themselves
 libvg.so
+config/dbconfig.txt
+config/forumdbconfig.txt

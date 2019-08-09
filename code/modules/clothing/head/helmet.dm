@@ -303,3 +303,24 @@
 	body_parts_covered = HEAD
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
+
+/obj/item/clothing/head/helmet/FemInqHat
+	name = "Witch Hunter hat"
+	desc = "In the grim darkness of the far future, there is only war...And hats..Lots of hats.."
+	icon_state = "feminq_hat"
+	item_state = "feminq_hat"
+	armor = list(melee = 75, bullet = 75, laser = 70, energy = 20, bomb = 25, bio = 100, rad = 100)
+	body_parts_covered = HEAD
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+
+/obj/item/clothing/head/helmet/PsykerHat
+	name = "Sanctioned Psyket Hat"
+	desc = "WITHNESS YOUR DOOM!!....Again."
+	icon_state = "psyker_hat"
+	item_state = "psyker_hat"
+	armor = list(melee = 45, bullet = 45, laser = 40, energy = 90, bomb = 45, bio = 10, rad = 10)
+	body_parts_covered = HEAD|EARS
+	heat_conductivity = HELMET_HEAT_CONDUCTIVITY
+	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7

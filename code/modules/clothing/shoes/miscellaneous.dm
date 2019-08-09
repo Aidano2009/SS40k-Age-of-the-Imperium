@@ -137,12 +137,14 @@
 	slowdown = MISC_SHOE_SLOWDOWN
 	species_fit = list(VOX_SHAPED)
 	heat_conductivity = INS_SHOE_HEAT_CONDUCTIVITY
+	sterility = 100
 
 /obj/item/clothing/shoes/galoshes/broken
 	name = "ruined galoshes"
 	desc = "The grip treading is broken off."
 	icon_state = "galoshes_ruined"
 	flags = null
+	sterility = 80
 
 /obj/item/clothing/shoes/clown_shoes
 	desc = "The prankster's standard-issue clowning shoes. Damn they're huge!"
@@ -356,7 +358,7 @@ obj/item/clothing/shoes/jackboots/cowboy
 	desc = "The height of fashion, and they're pre-polished!"
 	icon_state = "laceups"
 	species_fit = list(VOX_SHAPED)
-	
+
 /obj/item/clothing/shoes/purplepumps
 	name = "purple pumps"
 	desc = "Make you seem slightly taller."
@@ -515,3 +517,9 @@ obj/item/clothing/shoes/jackboots/cowboy
 	icon_state = "highlanderboots"
 	item_state = "highlanderboots"
 	wizard_garb = 1
+
+/obj/item/clothing/shoes/jackboots/IGboots
+	name = "Imperial Boots"
+	desc = "Good to walk over dead bodies,stomping the enemies of mankind and heretics."
+	icon_state = "flakboots"
+	item_state = "flakboots"

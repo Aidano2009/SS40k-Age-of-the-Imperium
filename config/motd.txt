@@ -1,0 +1,12 @@
+<!-- Most valid html will work in here, excluding images. -->
+
+<h1>SS40k: Age of the Imperium</h1>
+
+<h3>Welcome to a testing session!</h3>
+
+<i>The server is in active development and it could always use extra help.
+
+If you have any questions about the Warhammer 40k Universe, or this server. Feel free to ask in discord, or ahelp.
+
+<b>Discord:</b> https://discord.gg/vpmS3ZE
+<b>Github:</b> https://github.com/warhammer-in-a-2d-spessmen-game/SS40k-Age-of-the-Imperium</i>

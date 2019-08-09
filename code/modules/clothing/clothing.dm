@@ -1,5 +1,6 @@
 /obj/item/clothing
 	name = "clothing"
+	sterility = 5
 	var/list/species_restricted = null //Only these species can wear this kit.
 	var/wizard_garb = 0 // Wearing this empowers a wizard.
 	var/eyeprot = 0 //for head and eyewear
@@ -314,13 +315,14 @@
 	icon = 'icons/obj/clothing/gloves.dmi'
 	inhand_states = list("left_hand" = 'icons/mob/in-hand/left/gloves.dmi', "right_hand" = 'icons/mob/in-hand/right/gloves.dmi')
 	siemens_coefficient = 0.50
+	sterility = 50
 	var/wired = 0
 	var/obj/item/weapon/cell/cell = 0
 	var/clipped = 0
 	body_parts_covered = HANDS
 	slot_flags = SLOT_GLOVES
 	attack_verb = list("challenges")
-	species_restricted = list("exclude","Unathi","Tajaran","Muton")
+	species_restricted = list("exclude","Unathi","Tajaran","Muton","Ork")
 	var/pickpocket = 0 //Master pickpocket?
 
 	var/bonus_knockout = 0 //Knockout chance is multiplied by (1 + bonus_knockout) and is capped at 1/2. 0 = 1/12 chance, 1 = 1/6 chance, 2 = 1/4 chance, 3 = 1/3 chance, etc.
@@ -370,7 +372,7 @@
 	icon = 'icons/obj/clothing/hats.dmi'
 	body_parts_covered = HEAD
 	slot_flags = SLOT_HEAD
-	species_restricted = list("exclude","Muton")
+	species_restricted = list("exclude","Muton","Ork")
 
 /obj/item/proc/islightshielded() // So as to avoid unneeded casts.
 	return FALSE
@@ -381,7 +383,7 @@
 	icon = 'icons/obj/clothing/masks.dmi'
 	body_parts_covered = MOUTH
 	slot_flags = SLOT_MASK
-	species_restricted = list("exclude","Muton")
+	species_restricted = list("exclude","Muton","Ork")
 	var/can_flip = null
 	var/is_flipped = 1
 	var/ignore_flip = 0
@@ -452,8 +454,9 @@
 	slot_flags = SLOT_FEET
 	heat_conductivity = SHOE_HEAT_CONDUCTIVITY
 	permeability_coefficient = 0.50
+	sterility = 50
 
-	species_restricted = list("exclude","Unathi","Tajaran","Muton")
+	species_restricted = list("exclude","Unathi","Tajaran","Muton","Ork")
 	var/step_sound = ""
 	var/stepstaken = 1
 
@@ -500,9 +503,10 @@
 	heat_conductivity = ARMOUR_HEAT_CONDUCTIVITY
 	body_parts_covered = ARMS|LEGS|FULL_TORSO
 	var/blood_overlay_type = "suit"
-	species_restricted = list("exclude","Muton")
+	species_restricted = list("exclude","Muton","Ork")
 	siemens_coefficient = 0.9
 	clothing_flags = CANEXTINGUISH
+	sterility = 30
 
 //Spacesuit
 //Note: Everything in modules/clothing/spacesuits should have the entire suit grouped together.
@@ -520,9 +524,10 @@
 	body_parts_covered = FULL_HEAD|BEARD
 	siemens_coefficient = 0.9
 	heat_conductivity = SPACESUIT_HEAT_CONDUCTIVITY
-	species_restricted = list("exclude","Diona","Muton")
+	species_restricted = list("exclude","Diona","Muton","Ork")
 	eyeprot = 1
 	cold_breath_protection = 230
+	sterility = 100
 
 /obj/item/clothing/suit/space
 	name = "Space suit"
@@ -540,9 +545,10 @@
 	slowdown = HARDSUIT_SLOWDOWN_BULKY
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 50)
 	siemens_coefficient = 0.9
-	species_restricted = list("exclude","Diona","Muton")
+	species_restricted = list("exclude","Diona","Muton","Ork")
 	heat_conductivity = SPACESUIT_HEAT_CONDUCTIVITY
 	clothing_flags = CANEXTINGUISH
+	sterility = 100
 
 //Under clothing
 /obj/item/clothing/under
@@ -554,7 +560,7 @@
 	slot_flags = SLOT_ICLOTHING
 	heat_conductivity = JUMPSUIT_HEAT_CONDUCTIVITY
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
-	species_restricted = list("exclude","Muton")
+	species_restricted = list("exclude","Muton","Ork")
 	var/has_sensor = 1 //For the crew computer 2 = unable to change mode
 	var/sensor_mode = 0
 		/*

@@ -107,9 +107,9 @@ var/religion_name = null
 
 
 	if (config && config.server_name)
-		world.name = "[config.server_name]: [name]"
+		world.name = "[config.server_name]"
 	else
-		world.name = station_name
+		world.name = "SS40k" //What the fuck?
 
 	return station_name
 
@@ -123,9 +123,9 @@ var/religion_name = null
 	station_name = name
 
 	if (config && config.server_name)
-		world.name = "[config.server_name]: [name]"
+		world.name = "[config.server_name]"
 	else
-		world.name = name
+		world.name = "SS40k" //Forgive me for this laziness, but its 5am and im tired.
 
 var/syndicate_name = null
 /proc/syndicate_name()

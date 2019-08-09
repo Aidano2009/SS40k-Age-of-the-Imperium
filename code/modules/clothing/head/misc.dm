@@ -76,6 +76,7 @@
 	flags = FPRINT
 	permeability_coefficient = 0.01
 	siemens_coefficient = 0.9
+	sterility = 100
 
 /obj/item/clothing/head/hasturhood
 	name = "hastur's hood"
@@ -527,3 +528,11 @@
 	desc = "A red fancy looking wide-brimmed hat. It's even got a feather in it."
 	icon_state = "widehat_red"
 	item_state = "widehat_red"
+
+/obj/item/clothing/head/pharaoh
+	name = "pharaoh's headpiece"
+	desc = "An ornate golden headpiece worn by the ancient rulers of Space Egypt."
+	icon_state = "pharaoh"
+	item_state = "pharaoh"
+	wizard_garb = TRUE
+	body_parts_covered = FULL_HEAD|HEAD|EARS

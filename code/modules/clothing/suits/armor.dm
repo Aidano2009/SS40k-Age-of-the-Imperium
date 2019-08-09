@@ -377,6 +377,43 @@
 	desc = "A reinforced Coat that will inspire morale and scare the enemy from firing at you..Possibly."
 	icon_state = "commissar_coat"
 	item_state = "commissar_coat"
+	body_parts_covered = ARMS|LEGS|FULL_TORSO
 	blood_overlay_type = "armor"
 	clothing_flags = ONESIZEFITSALL
 	armor = list(melee = 45, bullet = 45, laser = 50, energy = 30, bomb = 35, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/Inqarmor
+	name = "Inquisitor Armor"
+	desc = "Smells of the convicted."
+	icon_state = "inq_armor"
+	item_state = "inq_armor"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 65, bullet = 65, laser = 70, energy = 60, bomb = 65, bio = 100, rad = 100)
+
+/obj/item/clothing/suit/armor/FemInqarmor
+	name = "Witch Hunter coat"
+	desc = "The best to go out and kill daemons while mantaining your job as an Inquisitor."
+	icon_state = "feminq_armor"
+	item_state = "feminq_armor"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 65, bullet = 65, laser = 70, energy = 60, bomb = 65, bio = 100, rad = 100)
+
+/obj/item/clothing/suit/armor/Psykercoat
+	name = "Sanctioned Psyker Coat"
+	desc = "WITHNESS YOUR DOOM!!"
+	icon_state = "psyker_armor"
+	item_state = "psyker_armor"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 35, bullet = 35, laser = 30, energy = 20, bomb = 25, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/GeneralArmor
+	name = "General Reinforced Coat"
+	desc = "An armored coat reinforced with ceramic plates and pauldrons to provide additional protection whilst still offering maximum mobility and flexibility. Issued only to the imperium's finest. ."
+	icon_state = "cadianCO_armor"
+	item_state = "cadianCO_armor"
+	blood_overlay_type = "armor"
+	clothing_flags = ONESIZEFITSALL
+	armor = list(melee = 65, bullet = 65, laser = 70, energy = 60, bomb = 65, bio = 100, rad = 100)
