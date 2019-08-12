@@ -5927,3 +5927,17 @@ obj/item/weapon/reagent_containers/food/snacks/butterfingers_l
 	..()
 	reagents.add_reagent(NUTRIMENT, 3)
 	bitesize = 2
+
+// The Ol' AA Rations
+
+/obj/item/weapon/reagent_containers/food/snacks/ration //This should go in the armory, kitchen, emergency storage, something.
+	name = "Imperial Ration"
+	desc = "A ration of the Imperium. It is unsure if this is really edible."
+	icon_state = "ration"
+
+/obj/item/weapon/reagent_containers/food/snacks/ration/New()
+	..()
+	reagents.add_reagent("nutriment", 10)
+	var/flavors = pick("soysauce","ketchup","capsaicin","condensedcapsaicin","sodiumchloride","blackpepper","cornoil","enzyme","tomatojuice", "potato")
+	reagents.add_reagent(pick(flavors), 3)
+	bitesize = 6
